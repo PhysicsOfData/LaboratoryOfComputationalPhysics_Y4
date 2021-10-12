@@ -1,0 +1,41 @@
+The to-do list
+To be done only the first time:
+1. Install git and create a GitHub account
+2. Generate your token on GitHub, can copy it to a safe place. Follow this guide:
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-person
+al-access-token
+3. Got to GitHub to the upstream repository webpage and fork it:
+https://github.com/zucchett/HighLevelProgramming2021
+4. On your pc, clone your forked repository:
+a. $ git clone
+https://<YourToken>@github.com/<YourUsername>/HighLevelProgramming2021.git
+5. Point your forked repository to the upstream repository:
+a. $ git remote add-upstream
+https://github.com/zucchett/HighLevelProgramming2021.git
+6. Fetch the updates directly from upstream:
+a. $ git fetch upstream
+7. Optional: create your own development branch to edit the code that tracks your branch on the
+upstream:
+a. $ git checkout -b <your branch name> upstream/<NameSurname>
+
+The to-do list
+Development cycle:
+1. Before starting any development, check whether the original repository has been updated, and merge
+the changes into your main:
+a. $ git checkout main
+b. $ git fetch upstream
+c. $ git merge upstream/main
+2. In case your PR has been recently approved, and/or you have a development branch, synch it:
+a. $ git checkout <your branch name>
+b. $ git fetch upstream/<NameSurname>
+c. $ git merge upstream/<NameSurname>
+3. Get the updates from the master:
+a. $ git merge main
+4. Develop code
+5. Add modified files to the staging area:
+a. $ git add <file1> <file2>
+6. Commit changes to your local repository:
+a. $ git commit -m “some message”
+7. Push local changes to your remote repository:
+a. $ git push origin <your branch name>
+8. When it’s time, prepare and open the Pull Request
