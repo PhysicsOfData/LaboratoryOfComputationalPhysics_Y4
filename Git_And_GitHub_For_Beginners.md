@@ -1,4 +1,4 @@
-# Terms
+## Terms
 
 - directory -> folder
 - terminal or command line -> interface for text commands
@@ -7,7 +7,7 @@
 - Git -> tool that tracks the changes in your code over time
 - GiHUb -> a website where you host all of your Git repositories online
 
-#Git Commands
+## Git Commands
 
 - clone -> bring a repository that is hosted somewhere like GitHub into a folder on your local machine
 - add -> track your files and changes (updated, created of deleted files) in Git
@@ -15,7 +15,7 @@
 - push -> upload Git commits to a remote repo, like GitHub
 - pull -> download changes from remote repo to your local machine (the opposite of push)
 
-#Git Workflow
+## Git Workflow
 
 Let's suppose you've made some changes to a file on your local machine and you want to save those changes and push them to your remote repository on GitHub.
 
