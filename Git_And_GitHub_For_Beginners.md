@@ -27,5 +27,11 @@ Let's suppose you've made some changes to a file on your local machine and you w
 - git push -> upload Git commits to your remote repo on GitHub
 - git push origin <Development_Branch> -> "origin" stands for the location of your Git repo and <Development_Branch> is the branch you want to push to (note: since I typed the command "git checkout -b <Development_Branch> upstream/<Surname_Name>" to create my development branch this is the only way to upload Git commits on my remote repo. The command "git push" will result in an error message and will be rejected)
 
+## Lab Class Routine
 
+- git checkout main
+- git fetch upstream
+- git merge upstream/main
 
+- git merge origin main (it will pop up a "black window", just type CTRL + Z to exit)
+- git merge origin main
