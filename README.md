@@ -67,6 +67,8 @@ The following instructions need to be followed any time a new local repository i
    `git fetch upstream`
 
    `git merge upstream/main`
+	
+   `git merge origin main`
    
    * And then in your development branch, if any:
    
@@ -75,6 +77,8 @@ The following instructions need to be followed any time a new local repository i
    `git fetch upstream <NameSurname>`
 
    `git merge upstream/<NameSurname>`
+	
+   `git merge origin <BranchName>`
 
    * The idea is that your main always reflects `upstream/main`, i.e. it keeps a local copy of the reference code as a starting point for your developments (i.e. solving the assigned problems). Note that in order to update your repository on GitHub, you need to push the local version to your remote repository.
 
