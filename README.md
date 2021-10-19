@@ -72,7 +72,7 @@ The following instructions need to be followed any time a new local repository i
    
    `git checkout <BranchName>`
 	   
-   `git fetch upstream/<NameSurname>`
+   `git fetch upstream <NameSurname>`
 
    `git merge upstream/<NameSurname>`
 
@@ -85,6 +85,8 @@ The following instructions need to be followed any time a new local repository i
    * In the case your pull request has been recently approved, make sure to synch your development branch:
 
    `git checkout <BranchName>`
+
+   `git fetch upstream <NameSurname>`
 
    `git merge upstream/<NameSurname>`
 
