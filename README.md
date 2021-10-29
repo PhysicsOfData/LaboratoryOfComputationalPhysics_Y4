@@ -3,6 +3,12 @@
 This is the official repository of the course, and contains the Jupyter Notebooks guiding students through the world of data analysis with python.
 The notebooks will be added few hours before each lecture / exercise.
 
+## Content of the branches
+- **_main_** $\rightarrow$ Tracks the professor `main` branch. It always reflects `upstream/main` and keeps a local copy of the reference code as a starting point for my developments.
+- **_mybranch_**: $\rightarrow$ Personal development branch. In this branch you will find my solutions of the exercises (files _**ex\__). 
+
+## Instructions for the students
+
 This repo should be forked by each individual student. Exercises should be committed to the student's repo. Before each deadline, a pull request (PR) should be prepared to integrate the changes into this (*upstream*) repository. Those pull requests should point to the appropriate student branch. PRs pointing to the *main* branch will be closed.
 
 ## IPython notebooks instructions and tips
