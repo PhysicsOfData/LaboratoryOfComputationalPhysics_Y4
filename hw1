@@ -1,0 +1,112 @@
+import math
+
+def HW_1_A():
+    x = []
+    for i in range(1, 101):
+        if i % 15 == 0:
+            x.append("MickyMouse")
+        elif i % 5 == 0:
+            x.append("Mouse")
+        elif i % 3 == 0:
+            x.append("Micky")
+        else:
+            x.append(i)
+    print(x)
+    return x
+
+def HW_1_B(x):
+    y = [("Donald" if n == "Micky" else ("Duck" if n == "Mouse" else n)) for n in x]
+    y = tuple(y)
+    print(y)
+    return y
+
+def HW_2_SwapFunc(num1,num2):
+    num1 , num2 = num2 , num1
+    print(f"{num1} {num2}")
+    return num1 , num2
+
+def HW_3(num1,num2):
+    distance = ((num1[0] - num2[0])**2 + (num1[1] - num2[1])**2)
+    result = math.sqrt(distance)
+    print(result)
+    return result
+
+def HW_4(st,ch):
+    result = st.count(ch)
+    print(result)
+    return result
+
+def HW_5():
+    l = [36, 45, 58, 3, 74, 96, 64, 45, 31, 10, 24, 19, 33, 86, 99, 18, 63, 70, 85,
+         85, 63, 47, 56, 42, 70, 84, 88, 55, 20, 54, 8, 56, 51, 79, 81, 57, 37, 91,
+         1, 84, 84, 36, 66, 9, 89, 50, 42, 91, 50, 95, 90, 98, 39, 16, 82, 31, 92, 41,
+         45, 30, 66, 70, 34, 85, 94, 5, 3, 36, 72, 91, 84, 34, 87, 75, 53, 51, 20, 89, 51, 20]
+    x = []
+    i = 0
+    for n in l:
+        l.remove(n)
+        if l.count(n) != 0:
+            while i < l.count(n):
+                l.remove(n)
+                i += 1
+        else:
+            x.append(n)
+    print(x)
+    return x
+
+def HW_6_A(num):
+    x = int(num)
+    print(x**2)
+    return x**2
+
+def HW_6_B(num):
+    x = int(num)
+    print(x**3)
+    return x**3
+def HW_6_C(num):
+    x = int(num)
+    y , z = HW_6_A(x), HW_6_B(x)
+    print(x*y*z)
+    return y*z*x
+def HW_7_A():
+    w = []
+    for i in range(0,10):
+        x = []
+        for n in range(0,10):
+
+            x.append(n)
+        f = x.copy()
+        w.append(f)
+    print(w)
+    return (w)
+
+def HW_7_B():
+    y = [[i for i in range(0,10)] for n in range(0,10)]
+    print(y)
+    return y
+
+
+def HW_8_Pythagorean():
+    a = [n for n in range(1,100)]
+    b = [n for n in range(1,100)]
+    c = [n for n in range(1,100)]
+    z = []
+    for n1 in a:
+        for n2 in b:
+            for n3 in c:
+                if n1**2 + n2**2 == n3**2:
+                    z.append((n1,n2,n3))
+    print(z)
+    return z
+
+
+i_HW_1 = HW_1_A()
+HW_1_B(i_HW_1)
+HW_2_SwapFunc(3,5)
+HW_3((3,4),(5,6))
+HW_4("mohammad","m")
+HW_5()
+HW_6_C(3)
+HW_7_A()
+HW_7_B()
+HW_8_Pythagorean()
