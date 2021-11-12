@@ -1,1 +1,0 @@
-print('proviamo a caricare un esercizio')
