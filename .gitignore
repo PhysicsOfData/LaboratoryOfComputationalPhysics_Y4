@@ -1,3 +1,5 @@
 .ipynb_checkpoints/
 *.txt
 *.txt.*
+*.h5
+*.hdf5
