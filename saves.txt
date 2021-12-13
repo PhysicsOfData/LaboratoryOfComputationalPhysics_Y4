@@ -1,0 +1,57 @@
+gridsize = (1, 3)
+fig = plt.figure(figsize=(16, 4))
+N = 200
+sigma = 6
+mu = 5
+#x = sigma * npr.randn(N) + mu
+x = npr.normal(loc = mu, scale = sigma, size = N)
+b = int(0.6*(max(x)-min(x)))
+hs = plt.subplot2grid(gridsize, (0, 0))
+bin_counts, bin_edges, patches = plt.hist(x,bins=b)
+plt.ylabel("Frequencies")
+hs.yaxis.set_major_locator(plt.MultipleLocator(4))
+bin_centres = (bin_edges[:-1] + bin_edges[1:]) / 2
+"""mask = (bin_counts == 0)
+bin_counts = np.delete(bin_counts,mask)
+bin_centres = np.delete(bin_centres,mask)"""
+y_error = (1/np.sqrt(bin_counts))
+plt.errorbar(x=bin_centres, y=bin_counts,
+             yerr=y_error, fmt='o')
+
+gaus = plt.subplot2grid(gridsize, (0, 1))
+x1 = np.linspace(x.min(),x.max(),N)
+vect_gaus = np.zeros((N,N))
+#rang = np.linspace(mu-4*sigma,mu+4*sigma,N)
+i=0
+std = 1.06*np.std(x)*pow(np.size(x),-1/5)
+for val in x:
+    vect_gaus[i,:] = stats.norm.pdf(x1, val, std)
+    gaus.plot(x1, vect_gaus[i],'-')
+    i+=1
+
+summed_gaus = np.sum(vect_gaus,axis = 0)
+norm = scipy.integrate.trapz(summed_gaus, x1)
+summ = plt.subplot2grid(gridsize,(0,2))
+#print(norm)
+Nint = scipy.integrate.trapz(bin_counts, bin_centres)
+curve = (Nint/norm)*summed_gaus
+norm1 = scipy.integrate.trapz(curve, x1)
+#print(norm1)
+#summ.plot(x1,summed_gaus,'-', label="No normaliz")
+summ.plot(x1,curve,'-',label="Normaliz")
+plt.hist(x,bins=b)
+#plt.legend()
+plt.show()
+
+
+
+print("\nEig method")
+l, V = la.eig(covm)
+l = np.real_if_close(l)
+for li,vi in zip(l,V.T):
+    print(round(li,2),vi)
+
+print("\nSVD method")
+U,D,VT = la.svd(dataset)
+for di,ui in zip(D,U.T):
+    print(di,ui)
