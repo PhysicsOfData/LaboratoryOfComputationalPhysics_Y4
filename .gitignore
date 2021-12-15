@@ -7,3 +7,5 @@
 *.csv
 *.png
 *.html
+*.npy
+*.png.*
