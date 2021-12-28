@@ -1,0 +1,20 @@
+git checkout main
+git fetch upstream
+git merge upstream/main
+																													
+git checkout develop_mp
+git fetch upstream Pedrazzi_Matteo
+git merge upstream/Pedrazzi_Matteo							
+							
+git pull
+
+git checkout develop_mp
+git fetch upstream Pedrazzi_Matteo
+git merge upstream/Pedrazzi_Matteo
+
+git merge main
+
+#git add "nomefile"
+#git commit -m "Add existing file"
+#git push origin develop_mp
+
