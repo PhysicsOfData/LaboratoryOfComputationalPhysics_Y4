@@ -5,3 +5,7 @@
 *.hdf5
 *.json
 *.csv
+*.png
+*.html
+*.npy
+*.png.*
