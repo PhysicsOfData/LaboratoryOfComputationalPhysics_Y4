@@ -1,0 +1,31 @@
+import csv
+a = []
+with open("data.txt", mode='r') as f:
+    check = 0
+    for line in f:
+        for character in line:
+            if character != "[" and character != "]" and character != " " and character != "\n":
+                if check == 1: num.append(character)
+                elif check == 0: 
+                    num = []
+                    num.append(character)
+                    check = 1
+            else:
+                if check == 1:
+                    num = ''.join(num)
+                    num = float(num)
+                    a.append(num)
+                    check = 0
+
+a = np.array(a).reshape(5,5)
+print(a)
+
+with open("data.csv", mode='w') as f:
+    for line in a:
+        i = 0
+        for val in line:
+            if i == 4:
+                f.write("{}\n".format(val))
+            else:
+                f.write("{},".format(val))
+            i += 1
